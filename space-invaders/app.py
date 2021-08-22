@@ -48,7 +48,7 @@ class Gahbage:
             self.clockobject.tick(self.settings.fps)
             self.events._check_events()
 
-            if self.stats.game_over == False and self.stats.game_paused == False and self.stats.game_active == True:
+            if not self.stats.game_over and not self.stats.game_paused and self.stats.game_active:
                 self.enemy._create_fleet()
                 self.player._update()
                 self.enemy._update()
