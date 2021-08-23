@@ -57,6 +57,7 @@ class Events:
                 elif event.type == pygame.MOUSEBUTTONDOWN:
                     mouse_pos = pygame.mouse.get_pos()
                     self._check_play_button(mouse_pos)
+                    self._check_game_over_button(mouse_pos)
     
     def _check_play_button(self, mouse_pos):
         """Check whether player clicks on "Play" or "Play Again" buttons."""
@@ -71,3 +72,7 @@ class Events:
             self.game.stats.prep_score()
             self.game.stats.prep_lives()
             self.game.stats.game_over = False
+    
+    def _check_game_over_button(self, mouse_pos):
+        if self.game.game_over_button.rect.collidepoint(mouse_pos) and self.game.stats.game_over:
+            sys.exit()
