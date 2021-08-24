@@ -6,3 +6,4 @@ The game is basically space invaders; player can move on the x-axis at the botto
 
 Creating this game was an exercise for me in working with classes, separating code in modules, and getting to learn the pygame framework. 
 
+![space-invaders](https://user-images.githubusercontent.com/68992338/130605712-88761b94-24dc-4ac1-8020-cddbe4bf3285.png)
